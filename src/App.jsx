@@ -44,7 +44,7 @@ export default function App(){
       return currentTodos.filter(todo => todo.id !== id)
     })
   }
-  console.log(todos);
+  // console.log(todos);
 
   return(
     <>
