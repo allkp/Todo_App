@@ -13,6 +13,7 @@ export default function App(){
 
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(todos))
+        console.log("object1")
   }, [todos])
 
  
@@ -34,6 +35,8 @@ export default function App(){
           return {...todo, completed }
         }
 
+        console.log("object2")
+
         return todo
       })
     })
@@ -41,6 +44,8 @@ export default function App(){
 
   function deleteTodo(id) {
     setTodos(currentTodos => {
+        console.log("object3")
+
       return currentTodos.filter(todo => todo.id !== id)
     })
   }
